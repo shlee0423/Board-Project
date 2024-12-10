@@ -1,0 +1,116 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* 공통 스타일 */
+h1 {
+    background-color: #4caf50; /* 배경 색상 */
+    color: #ffffff; /* 텍스트 색상 */
+    text-align: center; /* 가운데 정렬 */
+    padding: 15px 0; /* 위아래 여백 */
+    margin: 0 0 20px 0; /* 상단과 하단 여백 */
+    font-size: 28px; /* 폰트 크기 */
+    font-weight: bold; /* 굵은 글꼴 */
+    border-radius: 8px; /* 부드러운 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+    text-transform: uppercase; /* 대문자로 변환 */
+    letter-spacing: 1px; /* 글자 간격 */
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* 로그인 및 회원가입 중앙 배치 */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 전체 높이 */
+    margin: 0; /* 상단 여백 제거 */
+}
+
+/* 글쓰기, 글확인, 글수정 상단 배치 */
+.top-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto; /* 상단 여백 추가 */
+}
+
+/* 공통 폼 스타일 */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px; /* 버튼 사이에 간격을 추가 */
+}
+
+/* 각 버튼의 색상 */
+.btn-primary {
+    background-color: #4caf50; /* 확인 버튼 */
+}
+
+.btn-primary:hover {
+    filter: brightness(85%);
+}
+
+.btn-edit {
+    background-color: #3076c5; /* 수정 버튼 */
+}
+
+.btn-edit:hover {
+    filter: brightness(85%);
+}
+
+.btn-delete {
+    background-color: #f44336; /* 삭제 버튼 */
+}
+
+.btn-delete:hover {
+    filter: brightness(85%);
+}
+
