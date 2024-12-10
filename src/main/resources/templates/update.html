@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 확인</title>
+    <link rel="stylesheet" href="../static/css/all.css" th:href="@{/css/all.css}">
+</head>
+<body>
+<div class="top-container">
+    <div class="container">
+        <h1>글 수정</h1>
+        <form>
+            <label for="title">제목</label>
+            <input type="text" id="title" value="수정된 제목">
+
+            <label for="content">내용</label>
+            <textarea id="content" rows="8">수정된 내용이 여기에 표시됩니다.</textarea>
+
+            <button type="submit" class="btn btn-primary">수정 완료</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
