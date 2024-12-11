@@ -16,22 +16,23 @@
 //
 //    @Bean
 //    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        http.formLogin(config -> {
-//            config.loginPage("/user/login").loginProcessingUrl("/user/login")
-//                    .usernameParameter("userName")
-//                    .passwordParameter("userPassword")
-//                    .defaultSuccessUrl("/board");
-//        });
-//
-//        http.logout(config -> {
-//            config.logoutUrl("/logout").logoutSuccessUrl("/login");
-//        });
-//
-//        http.authorizeHttpRequests(registry -> {
-//            registry.requestMatchers("/user/login", "/user/signup").permitAll();
-//            registry.anyRequest().authenticated();
-//        });
-//
+//        http.csrf().disable();  // CSRF 보호 비활성화
+////        http.formLogin(config -> {
+////            config.loginPage("/user/login").loginProcessingUrl("/user/login")
+////                    .usernameParameter("userName")
+////                    .passwordParameter("userPassword")
+////                    .defaultSuccessUrl("/board");
+////        });
+////
+////        http.logout(config -> {
+////            config.logoutUrl("/logout").logoutSuccessUrl("/login");
+////        });
+////
+////        http.authorizeHttpRequests(registry -> {
+////            registry.requestMatchers("/user/login", "/user/signup").permitAll();
+////            registry.anyRequest().authenticated();
+////        });
+////
 //        return http.build();
 //    }
 //

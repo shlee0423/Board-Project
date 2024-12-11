@@ -4,10 +4,10 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+@ToString
 @Getter
 @Setter
 @Builder
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class BoardDTO {
@@ -20,4 +20,5 @@ public class BoardDTO {
     private Boolean isOpened;
     private Boolean isAnswered;
     private Integer password;
+
 }

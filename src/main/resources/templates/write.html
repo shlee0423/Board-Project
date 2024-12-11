@@ -7,10 +7,10 @@
 >
 <head>
     <meta charset="UTF-8">
-    <title>KOREA | 작성</title>
+    <title>게시물 작성</title>
     <script src="https://kit.fontawesome.com/e2ac94e0a6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/css/write.css" th:href="@{/css/customer_service/write.css}">
-    <script src="../../static/js/customer_service/write.js" th:src="@{/js/customer_service/write.js}" defer></script>
+    <link rel="stylesheet" href="../static/css/write.css" th:href="@{/css/write.css}">
+    <script src="../static/js/write.js" th:src="@{/js/write.js}" defer></script>
 </head>
 <body>
 <main layout:fragment="main">
@@ -18,7 +18,7 @@
         <h1>고객센터</h1>
         <span>무엇을 도와드릴까요?</span>
     </div>
-    <form th:action="@{/customer_service/write}" method="POST" enctype="multipart/form-data">
+    <form th:action="@{/board/write}" method="POST" enctype="multipart/form-data">
         <section class="faq-input-container">
             <div class="faq-input">
                 <label for="title">제목</label>
@@ -53,11 +53,11 @@
         </section>
 
         <section class="faq-textarea-container">
-            <textarea th:name="content" placeholder="내용을 작성하세요..."></textarea>
+            <textarea th:name="content" placeholder="내용을 작성하세요"></textarea>
         </section>
 
         <section class="faq-button-container">
-            <button type="button" onclick="location.href = '/customer_service/one_on_one'">취소</button>
+            <button type="button" onclick="location.href = '/board'">취소</button>
             <button type="submit">확인</button>
         </section>
     </form>
