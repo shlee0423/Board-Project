@@ -47,14 +47,14 @@
             </thead>
 
             <tbody>
-            <tr>
-                <td>번호</td>
-                <td><a>제목</a></td>
-                <td>작성날짜</td>
-                <td>작성자</td>
-                <td>조회수</td>
-                <td>공개여부</td>
-                <td>댓글수</td>
+            <tr th:each="board, stat: ${boards}">
+                <td th:text="${stat.count}">번호</td>
+                <td><a th:href="@{|/board/${board.no}|}" th:text="${board.title}">제목</a></td>
+                <td th:text="${#temporals.format(board.writeDateTime, 'yyyy-MM-dd')}">작성날짜</td>
+                <td th:text="${board.writer}">작성자</td>
+                <td th:text="${board.viewCount}">조회수</td>
+                <td th:text="${board.isOpened}">공개여부</td>
+                <td th:text="${board.isAnswered}">댓글수</td>
             </tr>
             </tbody>
         </table>
