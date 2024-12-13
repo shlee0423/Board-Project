@@ -10,4 +10,6 @@ public interface BoardMapper {
     List<BoardDTO> selectBoards();
     void insertBoardPost(BoardDTO boardDTO);
     BoardDTO selectBoardByNo(int no);
+    void updateBoard(BoardDTO boardDTO);
+    void deleteBoard(int no);
 }

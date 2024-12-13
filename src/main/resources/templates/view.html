@@ -8,6 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/css/view.css" th:href="@{/css/view.css}">
+    <script src="../static/js/view.js" th:src="@{/js/view.js}" defer></script>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
     <title>KOREA | VIEW</title>
 </head>
 <body>
@@ -103,8 +105,8 @@
 
         <section class="btn-container">
             <button type="button" onclick="location.href= '/board'">목록</button>
-            <button type="button" onclick="location.href= '/customer_service/one_on_one'">수정</button>
-            <button type="button" onclick="location.href= '/customer_service/one_on_one'">삭제</button>
+            <button type="button" th:onclick="|location.href= '/board/${no}/edit'|">수정</button>
+            <button type="button" th:onclick="'deleteBoard(' + ${board.no} + ')'">삭제</button>
         </section>
     </article>
 </main>

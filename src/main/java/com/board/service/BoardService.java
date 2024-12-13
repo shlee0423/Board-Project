@@ -21,4 +21,12 @@ public class BoardService {
     public void createPost(BoardDTO boardDTO) {
         boardMapper.insertBoardPost(boardDTO);
     }
+
+    public void updatePost(BoardDTO boardDTO) {
+        boardMapper.updateBoard(boardDTO);
+    }
+
+    public void deletePost(int no) {
+        boardMapper.deleteBoard(no);
+    }
 }
