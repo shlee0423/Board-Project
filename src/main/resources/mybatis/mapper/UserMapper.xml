@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.board.mapper.UserMapper">
+    <insert id="insertUser">
+        INSERT INTO `user` VALUES
+        (#{id},#{ci}, #{password}, #{email}, #{name}, #{nickName})
+    </insert>
+
+
+    <select id="selectUsername" parameterType="String" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `user`
+        WHERE `id` = #{id};
+    </select>
+</mapper>
